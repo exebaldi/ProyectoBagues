@@ -1,0 +1,123 @@
+
+/* IMPORT DE GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Croissant+One&family=Pacifico&display=swap');
+
+/* GLOBAL */
+
+*{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    text-align: center;
+    box-sizing: content-box;
+}
+
+/* FONT SIZE Y FAMILY */
+
+h1{
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+}
+
+nav{
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+}
+
+form{
+    font-family: 'Croissant One', cursive;
+    font-size: 5rem;
+}
+
+footer{
+    font-size: 3rem;
+}
+
+/* BREACKPOINTS */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    body{
+        background: red;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    body {
+        background: green;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    body {
+        background: blue;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    body {
+        background: orange;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    body {
+        background: pink;
+    }
+}
+
+/* BANNERS */
+
+.conteiner_index {
+    background-image: url(img/Principal/banner_dia_madre.jpg);
+    text-align: center;
+    margin: 30px 10px 30px;
+    border-radius: 15px;
+
+
+}
+
+.conteiner_ofertas {
+    background-image: url(img/Ofertas/banner_ofertas.jpg);
+    text-align: center;
+    margin: 30px 10px 30px;;
+    border-radius: 15px;
+    padding: 5px 5px;
+}
+
+.conteiner_higiene {
+    background-image: url(img/Higiene_Personal/higienebanner.jpg);
+    text-align: center;
+    margin: 30px 10px 30px;
+    border-radius: 15px;
+    padding: 5px 5px 10px;
+}
+
+.conteiner_fragancias {
+    background-image: url(img/Fragancias/fraganciasbanner.jpg);
+    text-align: center;
+    margin: 30px 10px 30px;
+    border-radius: 15px;
+    padding: 5px 5px 10px;
+}
+
+.conteiner_contacto {
+    background-image: url(img/Contacto/contacto_banner.jpg);
+    text-align: center;
+    margin: 30px 10px 30px;
+    border-radius: 15px;
+    padding: 5px 5px 10px;
+}
+
+/* EFECTO NAV MOUSE */
+
+nav a:hover{
+    color: salmon;
+}
+
