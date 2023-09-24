@@ -1,11 +1,10 @@
-
 /* IMPORT DE GOOGLE FONTS */
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Croissant+One&family=Pacifico&display=swap');
 
 /* GLOBAL */
 
-*{
+* {
     text-align: center;
     margin: 0;
     padding: 0;
@@ -16,22 +15,33 @@
 
 /* FONT SIZE Y FAMILY */
 
-h1{
+h1 {
     font-family: 'Pacifico', cursive;
     font-size: 4rem;
 }
+nav a:hover {
+    color: salmon;
+}
 
-nav{
+h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+}
+p {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+}
+nav {
     font-family: 'Cinzel', serif;
     font-size: 3rem;
 }
 
-form{
+form {
     font-family: 'Croissant One', cursive;
     font-size: 5rem;
 }
 
-footer{
+footer {
     font-size: 3rem;
 }
 
@@ -39,7 +49,7 @@ footer{
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    body{
+    body {
         background: red;
     }
 }
@@ -86,7 +96,8 @@ footer{
 .conteiner_ofertas {
     background-image: url(img/Ofertas/banner_ofertas.jpg);
     text-align: center;
-    margin: 30px 10px 30px;;
+    margin: 30px 10px 30px;
+    ;
     border-radius: 15px;
     padding: 5px 5px;
 }
@@ -102,6 +113,7 @@ footer{
 .conteiner_fragancias {
     background-image: url(img/Fragancias/fraganciasbanner.jpg);
     text-align: center;
+    font-size: 5rem;
     margin: 30px 10px 30px;
     border-radius: 15px;
     padding: 5px 5px 10px;
@@ -117,7 +129,119 @@ footer{
 
 /* EFECTO NAV MOUSE */
 
-nav a:hover{
-    color: salmon;
+
+/*
+.conteiner_fragancias {
+    background-image: url(img/Fragancias/fraganciasbanner.jpg);
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Pacifico', cursive;
+    margin: 30px 10px 30px;
+    border-radius: 15px;
+    padding: 5px 5px 10px;
+}
+*/
+.conteiner_Frag {
+    width: 90%;
+    max-width: 1000%;
+    margin: 20px auto;
+    background-color: rgb(255, 255, 255);
+    padding: 10 px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 5, 1fr;
+    grid-template-rows: repeat 5, auto;
+    grid-template-areas: "header header header header header"
+        "main main cont cont cont"
+        "cont2 cont2 cont2 main2 main2"
+        "main3 main3 cont3 cont3 cont3"
+        "footer footer footer footer footer";
 }
 
+.conteiner_Frag>div,
+.conteiner_Frag .header,
+.conteiner_Frag .main,
+.conteiner_Frag .main2,
+.conteiner_Frag .main3 .conteiner_Frag .cont .conteiner_Frag .cont2 .conteiner_Frag .cont3 {
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.header {
+    grid-area: header;
+    font-size: 5rem;
+    align-content: center;
+    background-color: pink;
+}
+
+
+.main {
+    grid-area: main;
+    align-content: center;
+    background-color: pink;
+}
+
+.main2 {
+    grid-area: main2;
+    background-color: pink;
+}
+
+.main3 {
+    grid-area: main3;
+    background-color: pink;
+}
+
+.footer {
+    grid-area: footer;
+    font-size: 4rem;
+    background-color: pink;
+
+}
+
+.cont2 {
+    grid-area: cont2;
+    font-size: 3rem;
+    align-content: center;
+    background-color: pink;
+}
+
+.cont3 {
+    grid-area: cont3;
+    font-size: 3rem;
+    align-content: center;
+    background-color: pink;
+}
+
+.cont {
+    grid-area: cont;
+    font-size: 3rem;
+    justify-content: center;
+    background-color: pink;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .conteiner_Frag {
+        grid-template-areas: "header header header header header"
+            "main main cont cont cont"
+            "cont2 cont2 cont2 main2 main2"
+            "main3 main3 cont3 cont3 cont3"
+            "footer footer footer footer footer";
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .conteiner_Frag {
+        grid-template-areas: "header header header header header"
+            "main main"
+            "cont cont cont"
+            "main2 main2"
+            "cont2 cont2 cont2"
+            "main3 main3"
+            "cont3 cont3 cont3"
+            "footer footer footer footer footer";
+
+    }
+}
