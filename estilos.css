@@ -19,10 +19,6 @@ h1 {
     font-family: 'Pacifico', cursive;
     font-size: 4rem;
 }
-nav a:hover {
-    color: salmon;
-}
-
 h2 {
     font-family: 'Pacifico', cursive;
     font-size: 3rem;
@@ -31,19 +27,28 @@ p {
     font-family: 'Pacifico', cursive;
     font-size: 2rem;
 }
-nav {
-    font-family: 'Cinzel', serif;
-    font-size: 3rem;
-}
-
 form {
     font-family: 'Croissant One', cursive;
     font-size: 5rem;
 }
-
 footer {
     font-size: 3rem;
 }
+header {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+}
+header a:hover {color: salmon};
+
+/* VER COMO APLICA EN OTRA PAGINAS */
+nav {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+}   
+nav a:hover {
+    color: salmon;
+}
+/* VER COMO APLICA EN OTRA PAGINAS */
 
 /* BREACKPOINTS */
 
@@ -141,6 +146,8 @@ footer {
     padding: 5px 5px 10px;
 }
 */
+
+/*Maquetado Fragancias*/
 .conteiner_Frag {
     width: 90%;
     max-width: 1000%;
@@ -151,11 +158,11 @@ footer {
     gap: 20px;
     grid-template-columns: 5, 1fr;
     grid-template-rows: repeat 5, auto;
-    grid-template-areas: "header header header header header"
-        "main main cont cont cont"
-        "cont2 cont2 cont2 main2 main2"
-        "main3 main3 cont3 cont3 cont3"
-        "footer footer footer footer footer";
+    grid-template-areas:"header header header header header"
+                        "main main cont cont cont"
+                        "cont2 cont2 cont2 main2 main2"
+                        "main3 main3 cont3 cont3 cont3"
+                        "footer footer footer footer footer";
 }
 
 .conteiner_Frag>div,
@@ -173,8 +180,6 @@ footer {
     align-content: center;
     background-color: pink;
 }
-
-
 .main {
     grid-area: main;
     align-content: center;
@@ -244,4 +249,30 @@ footer {
             "footer footer footer footer footer";
 
     }
+}
+
+/*Maquetado HeaderE*/
+.headerE {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:'promos'
+                        'logo'
+                        'nav';
+    gap: 10px;
+    font-size: 5rem;
+    align-content: center;
+    background-color: pink;
+}
+.header1 {
+    grid-area: promos;
+    background-color: black;
+    color: whitesmoke;
+    font-size: 2rem;
+}
+.header2 {
+    grid-area: logo;
+}
+.header3 {
+    grid-area: nav;
 }
