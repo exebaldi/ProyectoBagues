@@ -19,38 +19,39 @@ h1 {
     font-family: 'Pacifico', cursive;
     font-size: 4rem;
 }
+
 h2 {
     font-family: 'Pacifico', cursive;
     font-size: 3rem;
 }
+
 p {
     font-family: 'Pacifico', cursive;
     font-size: 2rem;
 }
+
 form {
     font-family: 'Croissant One', cursive;
     font-size: 5rem;
 }
+
 footer {
     font-size: 3rem;
 }
+
 header {
     font-family: 'Cinzel', serif;
     font-size: 3rem;
 }
-header a:hover {color: salmon};
 
-/* VER COMO APLICA EN OTRA PAGINAS */
-nav {
-    font-family: 'Cinzel', serif;
-    font-size: 3rem;
-}   
-nav a:hover {
-    color: salmon;
+header a:hover {
+    color: salmon
 }
-/* VER COMO APLICA EN OTRA PAGINAS */
 
-/* BREACKPOINTS */
+;
+
+
+/* BREAKPOINTS */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -94,8 +95,6 @@ nav a:hover {
     text-align: center;
     margin: 30px 10px 30px;
     border-radius: 15px;
-
-
 }
 
 .conteiner_ofertas {
@@ -115,15 +114,6 @@ nav a:hover {
     padding: 5px 5px 10px;
 }
 
-.conteiner_fragancias {
-    background-image: url(img/Fragancias/fraganciasbanner.jpg);
-    text-align: center;
-    font-size: 5rem;
-    margin: 30px 10px 30px;
-    border-radius: 15px;
-    padding: 5px 5px 10px;
-}
-
 .conteiner_contacto {
     background-image: url(img/Contacto/contacto_banner.jpg);
     text-align: center;
@@ -132,56 +122,71 @@ nav a:hover {
     padding: 5px 5px 10px;
 }
 
-/* EFECTO NAV MOUSE */
-
-
-/*
-.conteiner_fragancias {
-    background-image: url(img/Fragancias/fraganciasbanner.jpg);
-    text-align: center;
-    font-size: 5rem;
-    font-family: 'Pacifico', cursive;
-    margin: 30px 10px 30px;
-    border-radius: 15px;
-    padding: 5px 5px 10px;
-}
-*/
-
-/*Maquetado Fragancias*/
-.conteiner_Frag {
-    width: 90%;
-    max-width: 1000%;
-    margin: 20px auto;
-    background-color: rgb(255, 255, 255);
-    padding: 10 px;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 5, 1fr;
-    grid-template-rows: repeat 5, auto;
-    grid-template-areas:"header header header header header"
-                        "main main cont cont cont"
-                        "cont2 cont2 cont2 main2 main2"
-                        "main3 main3 cont3 cont3 cont3"
-                        "footer footer footer footer footer";
-}
-
-.conteiner_Frag>div,
-.conteiner_Frag .header,
-.conteiner_Frag .main,
-.conteiner_Frag .main2,
-.conteiner_Frag .main3 .conteiner_Frag .cont .conteiner_Frag .cont2 .conteiner_Frag .cont3 {
-    padding: 20px;
-    border-radius: 4px;
-}
-
+/* Maquetado Header */
 .header {
     grid-area: header;
     font-size: 5rem;
     align-content: center;
     background-color: pink;
 }
-.main {
-    grid-area: main;
+
+.header_anuncios {
+    background-color: black;
+    color: whitesmoke;
+    font-size: 2rem;
+    margin-bottom: 2%;
+}
+
+/* Maquetado Footer */
+.footer {
+    grid-area: footer;
+    font-size: 4rem;
+    background-color: pink;
+}
+
+
+/* Maquetado Fragancias */
+.conteiner_Frag {
+    /* width: 90%; */
+    max-width: 1000%;
+    /* margin: 20px auto; */
+    background-color: rgb(255, 255, 255);
+    /* padding: 10 px; */
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas: "header header header header header"
+        "banner_frag banner_frag banner_frag banner_frag banner_frag"
+        "main1 main1 cont1 cont1 cont1"
+        "cont2 cont2 cont2 main2 main2"
+        "main3 main3 cont3 cont3 cont3"
+        "footer footer footer footer footer";
+}
+
+.conteiner_Frag .main1,
+.conteiner_Frag .main2,
+.conteiner_Frag .main3,
+.conteiner_Frag .cont1,
+.conteiner_Frag .cont2,
+.conteiner_Frag .cont3 {
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.banner_fragancias {
+    grid-area: banner_frag;
+    background-image: url(img/Fragancias/fraganciasbanner.jpg);
+    text-align: center;
+    font-size: 5rem;
+    font-family: 'Pacifico', cursive;
+    border-radius: 15px;
+    padding: 5px 5px 10px;
+    background-color: pink;
+}
+
+.main1 {
+    grid-area: main1;
     align-content: center;
     background-color: pink;
 }
@@ -196,11 +201,11 @@ nav a:hover {
     background-color: pink;
 }
 
-.footer {
-    grid-area: footer;
-    font-size: 4rem;
+.cont1 {
+    grid-area: cont1;
+    font-size: 3rem;
+    align-content: center;
     background-color: pink;
-
 }
 
 .cont2 {
@@ -217,62 +222,27 @@ nav a:hover {
     background-color: pink;
 }
 
-.cont {
-    grid-area: cont;
-    font-size: 3rem;
-    justify-content: center;
-    background-color: pink;
-}
-
-
-
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
     .conteiner_Frag {
         grid-template-areas: "header header header header header"
-            "main main cont cont cont"
+            "banner_frag banner_frag banner_frag banner_frag banner_frag"
+            "main1 main1 main1 cont1 cont1"
             "cont2 cont2 cont2 main2 main2"
             "main3 main3 cont3 cont3 cont3"
             "footer footer footer footer footer";
     }
-
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 768px) {
     .conteiner_Frag {
         grid-template-areas: "header header header header header"
-            "main main"
-            "cont cont cont"
-            "main2 main2"
-            "cont2 cont2 cont2"
-            "main3 main3"
-            "cont3 cont3 cont3"
+            "banner_frag banner_frag banner_frag banner_frag banner_frag"
+            "main1 main1 main1 main1 main1"
+            "cont1 cont1 cont1 cont1 cont1"
+            "main2 main2 main2 main2 main2"
+            "cont2 cont2 cont2 cont2 cont2"
+            "main3 main3 main3 main3 main3"
+            "cont3 cont3 cont3 cont3 cont3"
             "footer footer footer footer footer";
-
     }
-}
-
-/*Maquetado HeaderE*/
-.headerE {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    grid-template-areas:'promos'
-                        'logo'
-                        'nav';
-    gap: 10px;
-    font-size: 5rem;
-    align-content: center;
-    background-color: pink;
-}
-.header1 {
-    grid-area: promos;
-    background-color: black;
-    color: whitesmoke;
-    font-size: 2rem;
-}
-.header2 {
-    grid-area: logo;
-}
-.header3 {
-    grid-area: nav;
 }
