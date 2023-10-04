@@ -1,6 +1,6 @@
 /* IMPORT DE GOOGLE FONTS */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Croissant+One&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Croissant+One&family=Pacifico&display=swap&family=Poppins:ital,wght@1,200&display=swap');
 
 /* GLOBAL */
 
@@ -101,7 +101,6 @@ header a:hover {
     background-image: url(img/Ofertas/banner_ofertas.jpg);
     text-align: center;
     margin: 30px 10px 30px;
-    ;
     border-radius: 15px;
     padding: 5px 5px;
 }
@@ -122,22 +121,57 @@ header a:hover {
     padding: 5px 5px 10px;
 }
 
-/* Maquetado Header */
+/* MAQUETADO HEADER */
+
 .header {
     grid-area: header;
     font-size: 5rem;
-    align-content: center;
+    place-content: center;
     background-color: pink;
 }
 
 .header_anuncios {
     background-color: black;
     color: whitesmoke;
-    font-size: 2rem;
-    margin-bottom: 2%;
+	margin-bottom:0.5%;
+    padding-top: 0.8%;
+	overflow: hidden;
+    height: 40px;
 }
 
-/* Maquetado Footer */
+.header_anuncios ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.header_anuncios li {
+	width: 100%;
+	list-style: none;
+}
+
+.header_anuncios p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+/* MAQUETADO FOOTER */
+
 .footer {
     grid-area: footer;
     font-size: 4rem;
@@ -145,23 +179,21 @@ header a:hover {
 }
 
 
-/* Maquetado Fragancias */
+/* MAQUETADO FRAGANCIAS */
+
 .conteiner_Frag {
-    /* width: 90%; */
     max-width: 1000%;
-    /* margin: 20px auto; */
-    background-color: rgb(255, 255, 255);
-    /* padding: 10 px; */
+    background-color: pink;
     display: grid;
     gap: 5px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, auto);
-    grid-template-areas: "header header header header header"
-        "banner_frag banner_frag banner_frag banner_frag banner_frag"
-        "main1 main1 cont1 cont1 cont1"
-        "cont2 cont2 cont2 main2 main2"
-        "main3 main3 cont3 cont3 cont3"
-        "footer footer footer footer footer";
+    grid-template-areas:"header header header header header"
+                        "banner_frag banner_frag banner_frag banner_frag banner_frag"
+                        "main1 main1 cont1 cont1 cont1"
+                        "cont2 cont2 cont2 main2 main2"
+                        "main3 main3 cont3 cont3 cont3"
+                        "footer footer footer footer footer";
 }
 
 .conteiner_Frag .main1,
@@ -183,6 +215,7 @@ header a:hover {
     border-radius: 15px;
     padding: 5px 5px 10px;
     background-color: pink;
+    margin: 30px 10px 30px;   
 }
 
 .main1 {
