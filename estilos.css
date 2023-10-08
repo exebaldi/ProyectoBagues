@@ -139,6 +139,10 @@ header a:hover {
     height: 40px;
 }
 
+.header_anuncios a:hover {
+    color: whitesmoke;
+}
+
 .header_anuncios ul {
 	display: flex;
 	padding: 0;
@@ -155,6 +159,13 @@ header a:hover {
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
 }
+
+.header_anuncios a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: whitesmoke;
+    }
 
 @keyframes slide {
 	0% {margin-left: 0;}
