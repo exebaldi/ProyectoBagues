@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Croissant+One&family=Pacifico&display=swap&family=Poppins:ital,wght@1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Pacifico&family=Philosopher&display=swap');
 
 /* GLOBAL */
 
@@ -30,7 +31,9 @@ h2 {
 }
 
 p {
+    font-family: 'Croissant One', serif;
     font-family: 'Pacifico', cursive;
+    font-family: 'Philosopher', sans-serif;
     font-size: 2rem;
 }
 
@@ -41,18 +44,18 @@ form {
 
 footer {
     font-size: 3rem;
+
 }
 
 header {
     font-family: 'Cinzel', serif;
     font-size: 3rem;
+
 }
 
 header a:hover {
     color: salmon
 }
-
-;
 
 
 /* BREAKPOINTS */
@@ -60,35 +63,35 @@ header a:hover {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     body {
-        background: red;
+
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     body {
-        background: green;
+
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     body {
-        background: blue;
+
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     body {
-        background: orange;
+
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     body {
-        background: pink;
+
     }
 }
 
@@ -131,7 +134,6 @@ header a:hover {
     grid-area: header;
     font-size: 5rem;
     place-content: center;
-    background-color: pink;
 }
 
 .header_anuncios {
@@ -190,7 +192,7 @@ header a:hover {
 .footer {
     grid-area: footer;
     font-size: 4rem;
-    background-color: pink;
+
 }
 
 
@@ -392,3 +394,42 @@ input#button {
 	margin-top: 20px;
 	width: 100%;
 }
+
+/* seccion de ventas */
+
+.galeria{
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.galeria img{
+    border-width: 0.5px;
+    margin-top: 10px;
+    transition: 0.5s;
+}
+
+.galeria img:hover{
+    transform: scale(1.1);
+}
+
+button{
+    background-color: #8e44ad;
+	border: 2px solid #8e44ad;
+	border-radius: 4px;
+	color: #fff;
+	font-family: inherit;
+	font-size: 16px;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+form input:hover{filter: sepia(60%);}
+
+.tachado{
+    text-decoration: line-through;
+}
+
