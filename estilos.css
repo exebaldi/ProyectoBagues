@@ -29,6 +29,7 @@ body {
 h1 {
     font-family: 'Pacifico', cursive;
 
+
 }
 
 h2 {
@@ -171,6 +172,13 @@ header a:hover {
     padding-bottom: 10px;
     
 }
+
+/* AJUSTE BANNER  */
+.textaju{
+    padding: 10px 10px 30px 10px;
+
+}
+
 
 /* MAQUETADO HEADER */
 
@@ -453,7 +461,7 @@ input#button {
 	width: 100%;
 }
 
-/* seccion de ventas */
+/* IMAGENES SECCION */
 
 .galeria{
     display: flex !important;
@@ -499,8 +507,4 @@ form input:hover{filter: sepia(60%);}
     border-radius: 50px;
 }
 
-.textaju{
-    padding: 10px 10px 30px 10px;
-
-}
 
