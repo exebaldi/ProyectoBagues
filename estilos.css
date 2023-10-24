@@ -7,13 +7,19 @@
 /* GLOBAL */
 
 * {
-    text-align: center;
     margin: 0;
     padding: 0;
     font-size: 62.5%;
     text-align: center;
     box-sizing: content-box;
-    
+
+}
+
+body {
+    background-image: url(img/istockphoto-1365132896-612x612.jpg);
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-repeat: no-repeat; 
 }
 
 
@@ -22,7 +28,7 @@
 
 h1 {
     font-family: 'Pacifico', cursive;
-    font-size: 4rem;
+
 }
 
 h2 {
@@ -57,6 +63,11 @@ header a:hover {
     color: salmon
 }
 
+.header_nav{
+    font-size: 4rem;
+}
+
+
 
 /* BREAKPOINTS */
 
@@ -65,6 +76,7 @@ header a:hover {
     body {
 
     }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -77,8 +89,7 @@ header a:hover {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     body {
-
-    }
+}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -95,37 +106,70 @@ header a:hover {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .conteiner_index ,
+    .conteiner_higiene,
+    .banner_fragancias
+    .conteiner_ofertas{
+        font-size: 9rem !important;
+    }
+    .conteiner_contacto{
+        font-size: 7rem !important;
+    }
+
+
+}
+
 /* BANNERS */
 
 .conteiner_index {
     background-image: url(img/Principal/banner_dia_madre.jpg);
-    text-align: center;
+    height: 150px;
     margin: 30px 10px 30px;
     border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12rem ;
+    padding-bottom: 10px;
+
 }
 
 .conteiner_ofertas {
     background-image: url(img/Ofertas/banner_ofertas.jpg);
-    text-align: center;
+    height: 150px;
     margin: 30px 10px 30px;
     border-radius: 15px;
-    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12rem ;
+    padding-bottom: 10px;
 }
 
 .conteiner_higiene {
     background-image: url(img/Higiene_Personal/higienebanner.jpg);
-    text-align: center;
+    height: 150px;
     margin: 30px 10px 30px;
     border-radius: 15px;
-    padding: 5px 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12rem ;
+    padding-bottom: 10px;
 }
 
 .conteiner_contacto {
     background-image: url(img/Contacto/contacto_banner.jpg);
-    text-align: center;
+    height: 150px;
     margin: 30px 10px 30px;
     border-radius: 15px;
-    padding: 5px 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8rem ;
+    padding-bottom: 10px;
+    
 }
 
 /* MAQUETADO HEADER */
@@ -226,13 +270,14 @@ header a:hover {
 .banner_fragancias {
     grid-area: banner_frag;
     background-image: url(img/Fragancias/fraganciasbanner.jpg);
-    text-align: center;
-    font-size: 5rem;
-    font-family: 'Pacifico', cursive;
+    height: 150px;
+    margin: 30px 10px 30px;
     border-radius: 15px;
-    padding: 5px 5px 10px;
-    background-color: pink;
-    margin: 30px 10px 30px;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12rem ;
+    padding-bottom: 10px;
 }
 
 .main1 {
@@ -276,7 +321,7 @@ header a:hover {
     .conteiner_Frag {
         grid-template-areas: "header header header header header"
             "banner_frag banner_frag banner_frag banner_frag banner_frag"
-            "main1 main1 main1 cont1 cont1"
+            "main1 main1 cont1 cont1 cont1"
             "cont2 cont2 cont2 main2 main2"
             "main3 main3 cont3 cont3 cont3"
             "footer footer footer footer footer";
@@ -312,6 +357,19 @@ header a:hover {
 .header h2 {
 	margin: 0;
 }
+
+.button_grande{
+    width: 100px;
+    height: 50px;
+}
+
+.cont1 h1,
+.cont2 h1
+.cont3 h1{
+    font-size: 4rem;
+}
+
+/* FORM */
 
 .form {
 	padding: 30px 40px;	
@@ -402,12 +460,15 @@ input#button {
     flex-wrap: wrap;
     justify-content: space-around;
 
+
 }
 
 .galeria img{
-    border-width: 0.5px;
     margin-top: 10px;
+    margin-bottom: 10px;
+    width: 310px;
     transition: 0.5s;
+
 }
 
 .galeria img:hover{
@@ -431,5 +492,15 @@ form input:hover{filter: sepia(60%);}
 
 .tachado{
     text-decoration: line-through;
+}
+
+.bordes{
+    border: solid whitesmoke;
+    border-radius: 50px;
+}
+
+.textaju{
+    padding: 10px 10px 30px 10px;
+
 }
 
