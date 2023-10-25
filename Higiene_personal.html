@@ -167,7 +167,44 @@
         <!-- Descarga Catalogo  -->
         <a href="catalogo/Catalogo_ciclo_10_23.pdf" download="catalogo"><i class="fa-regular fa-file-pdf fa-2xl" style="color: #c10b0b;"></i></a>
         <br><br>
+        <div class="container_dolar shadow-lg bg-body rounded">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>Moneda</th>
+                        <th>Valor</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody id="data">
+                </tbody>
+            </table>
+        </div>
     </footer>
+
+    <script>
+        let url = 'https://dolarapi.com/v1/dolares' //variable donde hacemos referencia al origen de los datos
+        fetch(url) //solicitud a la url (promesa)
+            .then(response => response.json()) //se resuelve la promesa, al obtener la respuesta la pasa a un determinado formato (json)
+            .then(data => mostrarData(data)) //llamamos a la función mostrardata()
+            .catch(error => console.log("Ocurrió un error", error)) // si hay un error será atrapado por catch
+            
+        const mostrarData = (data) => {
+            console.log(data)
+            let body = ''
+            for (let i = 1; i<2; i++){
+                // body = body + ... TR es una Table row / TD Table data
+                body += `<tr> 
+                    <td>${data[i].moneda+" Promedio"}</td>
+                    <td>${(data[i].venta+data[i].compra)/2}</td>
+                    <td>${data[i].fechaActualizacion}</td>
+                    </tr>`
+            }
+            
+            document.getElementById("data").innerHTML = body
+        }
+    </script>
+    
 </body>
 
 
