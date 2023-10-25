@@ -13,81 +13,83 @@
     <link rel="icon" href="img/favicion/favicon.ico">
 </head>
 
-<body> 
+<body>
     <div class="conteiner_Frag "> <!-- /*CONTENEDOR PADRE*/ -->
-        <header class="header">   <!-- /*CONTENEDOR HIJO 1*/ -->         
+        <header class="header"> <!-- /*CONTENEDOR HIJO 1*/ -->
             <div class="header_anuncios">
                 <ul>
                     <li><a href="index.html">ENVÍO GRATIS EN COMPRAS MAYORES A $40.000 </a></li>
                     <li><a href="https://www.modo.com.ar/promos" target="_blank">PROMOCIONES BANCARIAS </a></li>
                     <li><a href="index.html">ESPECIAL DÍA DE LA MADRE </a></li>
-                    <li><a href="contacto.html">EMPRENDÉ Y OBTENÉ COMISIONES INMEDIATAS </a></li>           
-                </ul> 
+                    <li><a href="contacto.html">EMPRENDÉ Y OBTENÉ COMISIONES INMEDIATAS </a></li>
+                </ul>
             </div>
-            
+
             <img src="img/bagues_logo.png" alt="bagues_logo">
-            
-            <div class="header_nav">  <!-- /*NAV*/ -->
+
+            <div class="header_nav"> <!-- /*NAV*/ -->
                 <a href="index.html">Inicio</a>
                 <a href="ofertas.html">Ofertas</a>
                 <a href="Higiene_personal.html">Higiene Personal</a>
                 <a href="fragancias.html">Fragancias</a>
                 <a href="contacto.html">Equipo Bagues </a>
-            </div>   
-            <hr> 
+            </div>
+            <hr>
         </header>
-    
-        <div class="banner_fragancias">  <!-- /*CONTENEDOR HIJO 2*/ --> 
-                <h1>Fragancias</h1>
+
+        <div class="banner_fragancias"> <!-- /*CONTENEDOR HIJO 2*/ -->
+            <h1>Fragancias</h1>
         </div>
-        
-        <div class="main1">     <!-- /*CONTENEDOR HIJO 3*/ -->  
+
+        <div class="main1"> <!-- /*CONTENEDOR HIJO 3*/ -->
             <img src="img/Fragancias/positano1-d-removebg-preview.png" alt="fragancia1">
         </div>
-        <div class="cont1">     <!-- /*CONTENEDOR HIJO 4*/ -->  
+        <div class="cont1"> <!-- /*CONTENEDOR HIJO 4*/ -->
             <br>
             <h1>Romantica, chispeante ¡Deliciosa!</h1>
             <h2>Es un perfume para Homenajear 90ml</h2><br>
-            <p>Type Nina by Bagues
-            Exquisita,afrutada y tentadora.Un perfume para el mundo romantico, deliciosa que hechiza conel el encanto.
-            Una fragancia luminosa, chispeante y sensual que invade todos los sentidos.</p>
+            <p>Type Nina by Bagues <br>
+                Exquisita,afrutada y tentadora.Un perfume para el mundo romantico, deliciosa que hechiza conel el
+                encanto.
+                Una fragancia luminosa, chispeante y sensual que invade todos los sentidos.</p>
             <br>
             <button class="button_grande">Comprar</button>
 
         </div>
 
 
-        <div class="main2">     <!-- /*CONTENEDOR HIJO 5*/ -->  
+        <div class="main2"> <!-- /*CONTENEDOR HIJO 5*/ -->
             <img src="img/Fragancias/fragancia2.jpg" alt="fragancia2">
         </div>
-        <div class="cont2">     <!-- /*CONTENEDOR HIJO 6*/ -->  
+        <div class="cont2"> <!-- /*CONTENEDOR HIJO 6*/ -->
             <br>
             <h1>Tu secreto para Hechizar</h1>
             <h2>Un Perfume en homenaje a las Brujas</h2> <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum id nihil, in dolores dolorum quibusdam
-                tempore quisquam et debitis officiis aliquam saepe aperiam, eligendi exercitationem architecto
-                cupiditate beatae provident? Est.</p>
+            <p>Type Halloween by Bagués <br>
+                Un portal a un mundo mágico y secreto, con la intensidad de la primavera a flor de piel.
+                Una fragancia para mujeres misteriosas y enigmáticas, que transporta a un sueño encantador en donde
+                todos caen bajo su hechizo.</p>
             <br>
             <button class="button_grande">Comprar</button>
             <br><br>
         </div>
 
-        <div class="main3">     <!-- /*CONTENEDOR HIJO 7*/ -->  
+        <div class="main3"> <!-- /*CONTENEDOR HIJO 7*/ -->
             <img src="img/Fragancias/fragancia3.jpg" alt="">
         </div>
-        <div class="cont3">     <!-- /*CONTENEDOR HIJO 8*/ -->  
+        <div class="cont3"> <!-- /*CONTENEDOR HIJO 8*/ -->
             <br>
             <h1>Glamurosa de dia y de noche</h1>
             <h2>Un perfume en homanje a Manhattan Party </h2> <br>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit ut nam ab at, sed placeat corrupti in
-                veritatis dolore dicta aliquam neque natus laudantium rem necessitatibus eveniet ratione totam quasi?</p>
+            <p>Type 212 Vip Rose by Bagués<br>
+                Su espíritu glamoroso te hace brillar de día y de noche. Una fragancia fresca, dinámica y esencialmente femenina, que expresa el ritmo de la gran ciudad</p>
             <br>
             <button class="button_grande">Comprar</button>
         </div>
 
 
-        
-        <footer class="footer">     <!-- /*CONTENEDOR HIJO 9*/ -->  
+
+        <footer class="footer"> <!-- /*CONTENEDOR HIJO 9*/ -->
             <!-- REDES SOCIALES -->
             <br>
             <hr>
@@ -117,30 +119,31 @@
                 </table>
             </div>
         </footer>
-    
+
         <script>
             let url = 'https://dolarapi.com/v1/dolares' //variable donde hacemos referencia al origen de los datos
             fetch(url) //solicitud a la url (promesa)
                 .then(response => response.json()) //se resuelve la promesa, al obtener la respuesta la pasa a un determinado formato (json)
                 .then(data => mostrarData(data)) //llamamos a la función mostrardata()
                 .catch(error => console.log("Ocurrió un error", error)) // si hay un error será atrapado por catch
-                
+
             const mostrarData = (data) => {
                 console.log(data)
                 let body = ''
-                for (let i = 1; i<2; i++){
+                for (let i = 1; i < 2; i++) {
                     // body = body + ... TR es una Table row / TD Table data
                     body += `<tr> 
-                        <td>${data[i].moneda+" Promedio"}</td>
-                        <td>${(data[i].venta+data[i].compra)/2}</td>
+                        <td>${data[i].moneda + " Promedio"}</td>
+                        <td>${(data[i].venta + data[i].compra) / 2}</td>
                         <td>${data[i].fechaActualizacion}</td>
                         </tr>`
                 }
-                
+
                 document.getElementById("data").innerHTML = body
             }
         </script>
 
     </div>
 </body>
+
 </html>
